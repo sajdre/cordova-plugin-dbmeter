@@ -54,7 +54,7 @@ import AVFoundation
 
             if (!self.isTimerExists) {
                 self.timer = DispatchSource.makeTimerSource(queue: DispatchQueue.main)
-                self.timer.scheduleRepeating(deadline: .now(), interval: DispatchTimeInterval.milliseconds(50))
+                self.timer.scheduleRepeating(deadline: .now(), interval: DispatchTimeInterval.milliseconds(10))
                 self.timer.setEventHandler(handler: self.timerCallBack)
                 self.isTimerExists = true
             }
